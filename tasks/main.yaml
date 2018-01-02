@@ -1,0 +1,13 @@
+---
+
+- include: dependences.yaml
+
+- include: apps.yaml
+
+- include: host.yaml
+
+- include: files.yaml
+
+- include: pip.yaml
+
+- include: environment.yaml

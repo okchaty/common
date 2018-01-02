@@ -1,0 +1,20 @@
+---
+
+- name: Update package repositories
+  apt:
+    update_cache: True
+  become: true
+  when: ansible_pkg_mgr == "apt"
+  tags:
+    - apt
+    - update_cache
+    - install
+
+- name: Install common package dependencies
+  package: name="{{ item }}" state=present
+  become: true
+  with_items: "{{ common_packages | default([]) }}"
+  register: install_common_packages
+  when: common_packages is defined
+  tags:
+    - install
