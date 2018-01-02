@@ -47,6 +47,14 @@ The default role variables in ``defaults/main.yml`` are:
             - python
             - git
 
+-  Env Vars:
+
+.. code-block:: yaml
+
+        common_env_vars:
+            var1:value 1
+            var2:value 2
+
 - Deploy code
 
 .. code-block:: yaml

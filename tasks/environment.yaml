@@ -1,11 +1,14 @@
 ---
 
-# - name: Set environment variables
-#   lineinfile:
-#     dest: /etc/environment
-#     line: "{{ item.key }}=\"{{ item.value }}\""
-#   notify: Export environment variables
-#   with_dict: system_env_vars
-#   tags:
-#     - environment
-#     - vars
+- name: Set environment variables
+  become: true
+  lineinfile:
+    dest: /etc/environment
+    line: "{{ item.key }}=\"{{ item.value }}\""
+  notify: Export environment variables
+  with_dict: common_env_vars
+  when:
+    - common_env_vars is defined
+  tags:
+    - environment
+    - vars
