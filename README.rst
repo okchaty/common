@@ -43,25 +43,29 @@ The default role variables in ``defaults/main.yml`` are:
 
 .. code-block:: yaml
 
-        common_packages:
-            - python
-            - git
+    common_packages:
+        - python
+        - git
 
 -  Env Vars:
 
 .. code-block:: yaml
 
-        common_env_vars:
-            var1:value 1
-            var2:value 2
+    common_env_vars:
+        var1:value 1
+        var2:value 2
+
+- user:
+
+.. code-block:: yaml
+
+    common_user: ubuntu
 
 - Deploy code
 
 .. code-block:: yaml
 
-    - role: hadenlabs.common
-      common_packages:
-      - python
+    common_only_deploy: yes
 
 Dependencies
 ============
