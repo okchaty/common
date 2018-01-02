@@ -4,6 +4,7 @@
 # common_deployment_apps update code deployment
 
 common_packages: []
+common_user: ubuntu
 
 # common_create_files:
 #   - path: "{{ app_dir_home }}/.ssh"
@@ -14,8 +15,7 @@ common_packages: []
 #     owner: "{{ user }}"
 
 # common_deployment:
-#   project:
-#     name: "{{ app_name }}"
+#     - name: "{{ app_name }}"
 #     version: "{{ git.branch.deployment }}" # Could be a hash, branch or tag name
 #     repo: "git@bitbucket.com:labpositiva/fbp"
 #     force: yes
