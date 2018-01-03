@@ -11,7 +11,7 @@
   with_dict: "{{ common_deployments | default([]) }}"
   when:
     - common_deployments is defined
-    - "common_user != 'vagrant'"
+    - common_user != 'vagrant'
   tags:
     - apps
     - deploy
