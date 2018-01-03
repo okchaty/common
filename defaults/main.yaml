@@ -5,6 +5,7 @@
 
 common_packages: []
 common_user: ubuntu
+common_only_deploy: no
 
 # common_create_files:
 #   - path: "{{ app_dir_home }}/.ssh"
