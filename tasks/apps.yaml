@@ -8,7 +8,7 @@
     dest: "{{ item.location }}"
     version: "{{ item.version }}"
     accept_hostkey: True
-  with_dict: "{{ common_deployments | default([]) }}"
+  with_items: "{{ common_deployments | default([]) }}"
   when:
     - common_deployments is defined
     - common_user != 'vagrant'
