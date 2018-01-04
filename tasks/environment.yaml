@@ -6,7 +6,7 @@
     dest: /etc/environment
     line: "{{ item.key }}=\"{{ item.value }}\""
   notify: Export environment variables
-  with_dict: common_env_vars
+  with_dict: "{{ common_env_vars | default({}) }}"
   when:
     - common_env_vars is defined
   tags:
