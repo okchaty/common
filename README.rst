@@ -102,6 +102,17 @@ To install a specific version:
                 common_package_dependencies:
                 - vim
 
+Add: users to group:
+
+.. code:: yaml
+
+        - hosts: servers
+          roles:
+             - role: hadenlabs.common
+                common_users:
+                - user: test
+                  group: test-group
+
 License
 =======
 
