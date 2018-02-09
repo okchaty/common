@@ -8,6 +8,9 @@ This file uses change log convention from `keep a CHANGELOG`_.
 `Unreleased`_
 *************
 
+`0.2.0`_ - 2018-02-09
+**********************
+
 `0.1.1`_ - 2018-01-04
 **********************
 
@@ -15,7 +18,8 @@ This file uses change log convention from `keep a CHANGELOG`_.
 **********************
 
 
-.. _`Unreleased`: https://github.com/hadenlabs/ansible-role-common/compare/0.1.1...HEAD
+.. _`Unreleased`: https://github.com/hadenlabs/ansible-role-common/compare/0.2.0...HEAD
+.. _0.2.0: https://github.com/hadenlabs/ansible-role-common/compare/0.1.1...0.2.0
 .. _0.1.1: https://github.com/hadenlabs/ansible-role-common/compare/0.1.0...0.1.1
 .. _0.1.0: https://github.com/hadenlabs/ansible-role-common/compare/0.0.0...0.1.0
 .. _0.1.0: https://github.com/hadenlabs/ansible-role-common/compare/0.0.0...0.1.0
