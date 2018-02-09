@@ -3,7 +3,7 @@ Ansible Role Common
 
 |Build Status| |Ansible Galaxy| |GitHub issues| |Average time to resolve an issue| |Percentage of issues still open| |GitHub license|
 
-:Version: 0.1.1
+:Version: 0.2.0
 :Web: https://github.com/hadenlabs/ansible-role-common
 :Download: http://github.com/hadenlabs/ansible-role-common
 :Source: http://github.com/hadenlabs/ansible-role-common
@@ -101,6 +101,17 @@ To install a specific version:
              - role: hadenlabs.common
                 common_package_dependencies:
                 - vim
+
+Add: users to group:
+
+.. code:: yaml
+
+        - hosts: servers
+          roles:
+             - role: hadenlabs.common
+                common_users:
+                - user: test
+                  group: test-group
 
 License
 =======

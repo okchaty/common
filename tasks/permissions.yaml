@@ -1,0 +1,19 @@
+---
+
+- name: Ensure group www-data is present
+  group: name="{{ item.group }}" state=present
+  sudo: yes
+  with_items: "{{ common_users | default([]) }}"
+  when:
+    - common_users is defined
+
+
+- name: Ensure user is in group
+  user: >
+    append=yes
+    groups={{item.group}}
+    name={{item.user}}
+  sudo: yes
+  with_items: "{{ common_users | default([]) }}"
+  when:
+    - common_users is defined
