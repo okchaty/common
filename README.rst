@@ -3,7 +3,7 @@ Ansible Role Common
 
 |Build Status| |Ansible Galaxy| |GitHub issues| |Average time to resolve an issue| |Percentage of issues still open| |GitHub license|
 
-:Version: 0.2.0
+:Version: 0.3.0
 :Web: https://github.com/hadenlabs/ansible-role-common
 :Download: http://github.com/hadenlabs/ansible-role-common
 :Source: http://github.com/hadenlabs/ansible-role-common
@@ -113,6 +113,19 @@ Add: users to group:
                 - user: test
                   group: test-group
 
+Add: files to server:
+
+.. code:: yaml
+
+    common_user = "{{ user}}"
+    common_copy_files:
+        - src: /usr/src/file
+            path: /usr/src/server/file
+            permissions: 0600
+            owner: "{{ user }}"
+            state: file
+
+
 License
 =======
 
@@ -161,7 +174,6 @@ Made with :heart: :coffee: and :pizza: by `author`_ and `company`_.
 .. _`author`: https://github.com/luismayta
 
 .. dependences
-.. _Python: https://www.python.org
 .. _Python 3.6.1: https://www.python.org/downloads/release/python-361
 .. _Docker: https://www.docker.com/
 .. _Docker Compose: https://docs.docker.com/compose/

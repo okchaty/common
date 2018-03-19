@@ -23,3 +23,5 @@
     - common_only_deploy == False
 
 - include: apps.yaml
+
+- include: copy_files.yaml
