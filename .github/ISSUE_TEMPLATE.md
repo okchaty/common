@@ -11,7 +11,7 @@ Briefly describe the issue you are experiencing (or the feature you want to see 
 
 If necessary, describe the problem you have been experiencing in more detail.
 
-## Link to dotfiles logs
+## Link to logs
 
 Create a [GIST](https://gist.github.com) which is a paste of your _full_ Dotfiles logs, and link them here. 
 Do _NOT_ paste your full Dotfiles logs here, as it will make this issue very long and hard to read! 

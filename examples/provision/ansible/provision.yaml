@@ -1,7 +1,5 @@
 ---
 # Ansible playbook for a ansible-role-common
-#
-# @author @slovacus (2015).
 
 - name: Common stuff for all the server
   hosts: all
@@ -12,4 +10,3 @@
   tags:
     - all
     - common
-    - authorization

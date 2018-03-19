@@ -46,12 +46,17 @@ windows:
   - python:
       layout: main-vertical
       panes:
-        - python:
+        - ipython:
   - databases:
       layout: main-vertical
       panes:
+        - postgresql:
         - ls:
-        - ls:
+  - aws:
+      layout: main-vertical
+      panes:
+        - webserver:
+        - databases:
   - docker:
       layout: main-vertical
       panes:
