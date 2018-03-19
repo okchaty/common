@@ -13,7 +13,7 @@
   become_user: "{{ common_user }}"
   file: path={{ item.path }} state={{ item.state }}
         owner={{ item.owner }}
-        mode=0600
+        mode={{ item.permissions }}
   with_items: "{{ common.copy_files | default({}) }}"
   tags:
     - copy_files
