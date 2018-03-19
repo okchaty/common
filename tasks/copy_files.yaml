@@ -1,0 +1,19 @@
+---
+
+- name: Copy files local to remote
+  become: true
+  become_user: "{{ common_user }}"
+  copy: src="{{ item.src }}" dest="{{ item.path }}"
+  with_items: "{{ common.copy_files | default({}) }}"
+  tags:
+    - copy_files
+
+- name: permissions for copy files
+  become: true
+  become_user: "{{ common_user }}"
+  file: path={{ item.path }} state={{ item.state }}
+        owner={{ item.owner }}
+        mode=0600
+  with_items: "{{ common.copy_files | default({}) }}"
+  tags:
+    - copy_files
