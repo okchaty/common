@@ -3,7 +3,7 @@ Ansible Role Common
 
 |Build Status| |Ansible Galaxy| |GitHub issues| |Average time to resolve an issue| |Percentage of issues still open| |GitHub license|
 
-:Version: 0.3.0
+:Version: 0.3.1
 :Web: https://github.com/hadenlabs/ansible-role-common
 :Download: http://github.com/hadenlabs/ansible-role-common
 :Source: http://github.com/hadenlabs/ansible-role-common
@@ -119,11 +119,9 @@ Add: files to server:
 
     common_user = "{{ user}}"
     common_copy_files:
-        - src: /usr/src/file
-            path: /usr/src/server/file
-            permissions: 0600
-            owner: "{{ user }}"
-            state: file
+      - src: /usr/src/file
+        path: /usr/src/server/file
+        permissions: 0640
 
 
 License
