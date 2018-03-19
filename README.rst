@@ -119,11 +119,9 @@ Add: files to server:
 
     common_user = "{{ user}}"
     common_copy_files:
-        - src: /usr/src/file
-            path: /usr/src/server/file
-            permissions: 0600
-            owner: "{{ user }}"
-            state: file
+      - src: /usr/src/file
+        path: /usr/src/server/file
+        permissions: 0640
 
 
 License
