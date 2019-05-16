@@ -4,10 +4,10 @@ Ansible Role Common
 |Build Status| |Ansible Galaxy| |GitHub issues| |Average time to resolve an issue| |Percentage of issues still open| |GitHub license|
 
 :Version: 0.3.1
-:Web: https://github.com/hadenlabs/ansible-role-common
-:Download: http://github.com/hadenlabs/ansible-role-common
-:Source: http://github.com/hadenlabs/ansible-role-common
-:Keywords: ansible-role-common
+:Web: https://github.com/okchaty/common
+:Download: http://github.com/okchaty/common
+:Source: http://github.com/okchaty/common
+:Keywords: common
 
 .. contents:: Table of Contents:
     :local:
@@ -28,7 +28,7 @@ Install it with the following command:
 
 .. code-block:: bash
 
-    $ ansible-galaxy install hadenlabs.common
+    $ ansible-galaxy install okchaty.common
 
 Role Variables
 ==============
@@ -84,7 +84,7 @@ this:
 
         - hosts: servers
           roles:
-            - hadenlabs.common
+            - okchaty.common
 
 To install a specific version:
 
@@ -92,13 +92,13 @@ To install a specific version:
 
       - hosts: servers
         roles:
-          - { role: hadenlabs.common }
+          - { role: okchaty.common }
 
 .. code:: yaml
 
         - hosts: servers
           roles:
-             - role: hadenlabs.common
+             - role: okchaty.common
                 common_package_dependencies:
                 - vim
 
@@ -108,7 +108,7 @@ Add: users to group:
 
         - hosts: servers
           roles:
-             - role: hadenlabs.common
+             - role: okchaty.common
                 common_users:
                 - user: test
                   group: test-group
@@ -150,16 +150,16 @@ Made with :heart: :coffee: and :pizza: by `author`_ and `company`_.
 
 .. Badges:
 
-.. |Build Status| image:: https://travis-ci.org/hadenlabs/ansible-role-common.svg
-   :target: https://travis-ci.org/hadenlabs/ansible-role-common
-.. |Ansible Galaxy| image:: https://img.shields.io/badge/galaxy-hadenlabs.common-blue.svg
-   :target: https://galaxy.ansible.com/hadenlabs/ansible-role-common/
-.. |GitHub issues| image:: https://img.shields.io/github/issues/hadenlabs/ansible-role-common.svg
-   :target: https://github.com/hadenlabs/ansible-role-common/issues
-.. |Average time to resolve an issue| image:: http://isitmaintained.com/badge/resolution/hadenlabs/ansible-role-common.svg
-   :target: http://isitmaintained.com/project/hadenlabs/ansible-role-common
-.. |Percentage of issues still open| image:: http://isitmaintained.com/badge/open/hadenlabs/ansible-role-common.svg
-   :target: http://isitmaintained.com/project/hadenlabs/ansible-role-common
+.. |Build Status| image:: https://travis-ci.org/okchaty/common.svg
+   :target: https://travis-ci.org/okchaty/common
+.. |Ansible Galaxy| image:: https://img.shields.io/badge/galaxy-okchaty.common-blue.svg
+   :target: https://galaxy.ansible.com/okchaty/common/
+.. |GitHub issues| image:: https://img.shields.io/github/issues/okchaty/common.svg
+   :target: https://github.com/okchaty/common/issues
+.. |Average time to resolve an issue| image:: http://isitmaintained.com/badge/resolution/okchaty/common.svg
+   :target: http://isitmaintained.com/project/okchaty/common
+.. |Percentage of issues still open| image:: http://isitmaintained.com/badge/open/okchaty/common.svg
+   :target: http://isitmaintained.com/project/okchaty/common
 .. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
    :target: LICENSE
 
@@ -168,7 +168,7 @@ Made with :heart: :coffee: and :pizza: by `author`_ and `company`_.
 .. _`contributors`: AUTHORS
 .. _`contributing`: CONTRIBUTING.rst
 
-.. _`company`: https://github.com/hadenlabs
+.. _`company`: https://github.com/okchaty
 .. _`author`: https://github.com/luismayta
 
 .. dependences

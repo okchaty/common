@@ -1,5 +1,5 @@
 ---
-# Ansible playbook for a ansible-role-common
+# Ansible playbook for a common
 
 - name: Common stuff for all the server
   hosts: all

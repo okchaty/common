@@ -1,6 +1,6 @@
-# ~/.tmuxinator/ansible-role-common.yml
-name: ansible-role-common
-root: <%= ENV["PROJECTS"] %>/ansible/roles/ansible-role-common
+# ~/.tmuxinator/common.yml
+name: common
+root: <%= ENV["PROJECTS"] %>/ansible/roles/common
 # Optional tmux socket
 # socket_name: foo
 
@@ -47,11 +47,6 @@ windows:
       layout: main-vertical
       panes:
         - ipython:
-  - databases:
-      layout: main-vertical
-      panes:
-        - postgresql:
-        - ls:
   - aws:
       layout: main-vertical
       panes:
