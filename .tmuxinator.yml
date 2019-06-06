@@ -1,4 +1,5 @@
 # ~/.tmuxinator/common.yml
+---
 name: common
 root: <%= ENV["PROJECTS"] %>/ansible/roles/common
 # Optional tmux socket
@@ -47,11 +48,6 @@ windows:
       layout: main-vertical
       panes:
         - ipython:
-  - aws:
-      layout: main-vertical
-      panes:
-        - webserver:
-        - databases:
   - docker:
       layout: main-vertical
       panes:
