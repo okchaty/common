@@ -1,14 +1,9 @@
 ---
 
-- name: Update package repositories
+- name: Upgrade all packages
   apt:
-    update_cache: True
-  become: true
-  when: ansible_pkg_mgr == "apt"
-  tags:
-    - apt
-    - update_cache
-    - install
+    upgrade: true
+    state: latest
 
 - name: Install common package dependencies
   package: name="{{ item }}" state=present

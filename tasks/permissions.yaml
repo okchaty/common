@@ -2,7 +2,7 @@
 
 - name: Ensure group www-data is present
   group: name="{{ item.group }}" state=present
-  sudo: yes
+  become: true
   with_items: "{{ common_users | default([]) }}"
   when:
     - common_users is defined
@@ -13,7 +13,7 @@
     append=yes
     groups={{item.group}}
     name={{item.user}}
-  sudo: yes
+  become: true
   with_items: "{{ common_users | default([]) }}"
   when:
     - common_users is defined
