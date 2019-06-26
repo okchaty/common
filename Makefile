@@ -3,29 +3,30 @@
 #
 
 OS := $(shell uname)
-.PHONY: help build up requirements clean lint test help
+.PHONY: help
 .DEFAULT_GOAL := help
 
 PROJECT := common
 
 PYTHON_VERSION=3.6.5
-PYENV_NAME=ansible-role-common
+PYENV_NAME="${PROJECT}"
 
 # Configuration.
 SHELL ?=/bin/bash
 ROOT_DIR=$(shell pwd)
 MESSAGE:=🍺️
-MESSAGE_HAPPY:="Done! ${MESSAGE} Now Happy Coding"
+MESSAGE_HAPPY:="Done! ${MESSAGE} | Now Happy Coding"
 SOURCE_DIR=$(ROOT_DIR)/
 REQUIREMENTS_DIR=$(ROOT_DIR)/requirements
 PROVISION_DIR:=$(ROOT_DIR)/provision
 FILE_README:=$(ROOT_DIR)/README.rst
 PATH_DOCKER_COMPOSE:=provision/docker-compose
+DOCKER_SERVICE=app
 
 pip_install := pip install -r
 docker-compose:=docker-compose -f docker-compose.yml
 
-include extras/make/*.mk
+include provision/make/*.mk
 
 help:
 	@echo '${MESSAGE} Makefile for ${PROJECT}'
@@ -53,6 +54,7 @@ endif
 	@echo
 
 setup: clean
+	@echo "=====> install setup to ${PYENV_NAME}..."
 	$(pip_install) "${REQUIREMENTS_DIR}/setup.txt"
 	@if [ -e "${REQUIREMENTS_DIR}/private.txt" ]; then \
 			$(pip_install) "${REQUIREMENTS_DIR}/private.txt"; \
@@ -62,6 +64,7 @@ setup: clean
 	@if [ ! -e ".env" ]; then \
 		cp -rf .env-sample .env;\
 	fi
+	@echo $(MESSAGE_HAPPY)
 
 environment: clean
 	@echo "=====> loading virtualenv ${PYENV_NAME}..."
