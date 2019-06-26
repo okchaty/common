@@ -1,5 +1,4 @@
 ---
-
 galaxy_info:
   author: Luis Mayta
   description: Ansible role to services Common
@@ -70,7 +69,7 @@ galaxy_info:
   #  - quantal
   #  - raring
   #  - saucy
-    - trusty
+      - trusty
   #- name: SLES
   #  versions:
   #  - all
@@ -104,7 +103,7 @@ galaxy_info:
   #- database
   #- database:nosql
   #- database:sql
-  - development
+    - development
   #- monitoring
   #- networking
   #- packaging
